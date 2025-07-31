@@ -21,8 +21,9 @@ const Infantil = () => {
             Educação Infantil
           </h2>
           <p className="text-gray-600">
-            Desenvolvimento integral para crianças de 3 a 5 anos
+            Desenvolvimento integral para crianças
           </p>
+          <p className="text-gray-600">de 3 a 5 anos</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
@@ -68,7 +69,7 @@ const Infantil = () => {
 
               <div className="bg-gradient-to-r from-pink-100 to-pink-200 rounded-2xl p-6">
                 <div className="flex items-center justify-between">
-                  <div className="max-w-60">
+                  <div className="max-w-50">
                     <h4 className="text-2xl font-bold text-gray-900 mb-2">
                       Investimento
                     </h4>

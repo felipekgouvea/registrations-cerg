@@ -20,9 +20,8 @@ const Integral = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Período Integral
           </h2>
-          <p className="text-xl text-gray-600">
-            Cuidado e educação completa das 7h às 18h30
-          </p>
+          <p className="text-xl text-gray-600">Cuidado e educação completa</p>
+          <p className="text-xl text-gray-600">das 7h às 18h30</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
@@ -68,16 +67,16 @@ const Integral = () => {
 
               <div className="bg-gradient-to-r from-yellow-100 to-yellow-200 rounded-2xl p-6">
                 <div className="flex items-center justify-between">
-                  <div className="max-w-60">
+                  <div className="max-w-50">
                     <h4 className="text-2xl font-bold text-gray-900 mb-2">
                       Investimento
                     </h4>
                     <p className="text-gray-600">
-                      Inclui alimentação e todas as atividades
+                      Mensalidade com desconto para pagamento até dia 05
                     </p>
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-yellow-600">
+                    <div className="text-xl font-bold text-yellow-600">
                       R$ 1.300,00
                     </div>
                     <div className="text-gray-500 line-through text-lg">

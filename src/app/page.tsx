@@ -60,12 +60,13 @@ export default function CERGLanding() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Como Funciona a Matrícula
+            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Como Funciona o processo de Matrícula
             </h2>
             <p className="text-xl text-gray-600">
-              Processo simples e acolhedor em 4 passos
+              Processo simples e acolhedor
             </p>
+            <p className="text-xl text-gray-600">em 4 passos</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
@@ -153,30 +154,30 @@ export default function CERGLanding() {
                 </div>
 
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center p-6 bg-gradient-to-r from-red-50 to-red-100 rounded-2xl">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                        <BookOpen className="w-6 h-6 text-white" />
-                      </div>
+                  <div className="flex gap-4 justify-between p-3 items-center bg-gradient-to-r from-red-50 to-red-100 rounded-2xl">
+                    <div className="w-12 h-12   bg-blue-600 rounded-full flex items-center justify-center">
+                      <BookOpen className="w-6 h-6 text-white" />
+                    </div>
+
+                    <div className="flex flex-col gap-3 flex-auto">
                       <div>
-                        <span className="font-bold text-gray-900 text-lg">
+                        <span className="font-bold text-gray-900">
                           Educação Infantil
                         </span>
                         <p className="text-sm text-gray-600">
                           Coleção Saber Mais
                         </p>
                       </div>
+                      <span className="text-red-600 font-bold">R$ 679,00</span>
                     </div>
-                    <span className="text-red-600 font-bold text-xl">
-                      R$ 679,00
-                    </span>
                   </div>
 
-                  <div className="flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
-                        <GraduationCap className="w-6 h-6 text-white" />
-                      </div>
+                  <div className="flex gap-4 justify-between items-center p-3 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl">
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
+                      <GraduationCap className="w-6 h-6 text-white" />
+                    </div>
+
+                    <div className="flex flex-col gap-3 flex-auto">
                       <div>
                         <span className="font-bold text-gray-900 ">
                           Ensino Fundamental
@@ -185,13 +186,13 @@ export default function CERGLanding() {
                           Coleção Quero Saber Mais
                         </p>
                       </div>
+                      <span className="text-blue-600 font-bold">
+                        R$ 1.578,00
+                      </span>
                     </div>
-                    <span className="text-blue-600 font-bold ">
-                      R$ 1.578,00
-                    </span>
                   </div>
 
-                  <div className="text-center p-4 bg-green-50 rounded-2xl">
+                  <div className="text-center p-2 space-y-4 bg-green-50 rounded-2xl">
                     <p className="text-green-700 font-semibold">
                       💳 Parcelamento em 6x no cartão
                     </p>
@@ -243,12 +244,13 @@ export default function CERGLanding() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Documentos Necessários
+            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Documentos Necessários para Matrícula
             </h2>
             <p className="text-gray-600">
-              Prepare estes documentos para agilizar sua matrícula
+              Prepare estes documentos para agilizar
             </p>
+            <p className="text-gray-600">a matrícula do seu(sua) filho(a)</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -289,9 +291,8 @@ export default function CERGLanding() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Perguntas Frequentes
             </h2>
-            <p className=" text-gray-600">
-              Esclarecemos as principais dúvidas dos pais sobre o CERG
-            </p>
+            <p className=" text-gray-600">Esclarecemos as principais dúvidas</p>
+            <p className=" text-gray-600">dos pais sobre o CERG</p>
           </div>
 
           <div className="max-w-4xl mx-auto">

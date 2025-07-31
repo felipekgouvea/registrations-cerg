@@ -18,11 +18,11 @@ const Hero = () => {
         <div className="text-center max-w-6xl mx-auto space-y-12">
           {/* Main Title */}
           <div className="space-y-8">
-            <Badge className="bg-gradient-to-r from-red-100 to-red-200 text-red-800 px-8 py-4 text-lg font-semibold rounded-full border border-red-300 mx-auto">
-              ✨ Matrículas Abertas 2026 - Vagas Limitadas!
+            <Badge className="flex items-center justify-center bg-gradient-to-r from-red-100 to-red-200 text-red-800 px-8 py-4 text-lg font-semibold rounded-full border border-red-300 mx-auto">
+              ✨ Matrículas Abertas 2026
             </Badge>
 
-            <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-4xl lg:text-7xl font-bold text-gray-900 leading-tight">
               Centro Educacional
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700 block">
                 Ribeiro Gouvêa
@@ -55,22 +55,6 @@ const Hero = () => {
               <Phone className="w-5 h-5 mr-2" />
               Falar no WhatsApp
             </Link>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 pt-12 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-red-600 mb-2">32</div>
-              <div className="text-gray-600 font-medium">Anos de tradição</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-gray-600 font-medium">Alunos formados</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">98%</div>
-              <div className="text-gray-600 font-medium">Satisfação</div>
-            </div>
           </div>
         </div>
       </div>

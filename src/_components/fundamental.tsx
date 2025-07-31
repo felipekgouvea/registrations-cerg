@@ -17,12 +17,13 @@ const Fundamental = () => {
           <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
             <School className="w-10 h-10 text-white" />
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
             Ensino Fundamental I
           </h2>
           <p className="text-gray-600">
-            Formação sólida e preparação para o futuro - 1º ao 5º ano
+            Formação sólida e preparação para o futuro
           </p>
+          <p className="text-gray-600">1º ao 5º ano</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
@@ -72,7 +73,7 @@ const Fundamental = () => {
 
               <div className="bg-gradient-to-r from-blue-100 to-blue-200 rounded-2xl p-6">
                 <div className="flex items-center justify-between">
-                  <div className="max-w-60">
+                  <div className="max-w-50">
                     <h4 className="text-2xl font-bold text-gray-900 mb-2">
                       Investimento
                     </h4>
@@ -81,7 +82,7 @@ const Fundamental = () => {
                     </p>
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-blue-600">
+                    <div className="text-xl font-bold text-blue-600">
                       R$ 630,00
                     </div>
                     <div className="text-gray-500 line-through text-lg">

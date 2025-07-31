@@ -21,8 +21,9 @@ const MeioPeriodo = () => {
             Meio Período
           </h2>
           <p className="text-xl text-gray-600">
-            Flexibilidade para sua família - 11h às 18h30
+            Flexibilidade para sua família
           </p>
+          <p className="text-xl text-gray-600">11h às 18h30</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
@@ -40,18 +41,12 @@ const MeioPeriodo = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">Almoço incluído</span>
+                  <span className="text-gray-700">Almoço incluíso</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
                   <span className="text-gray-700">
                     Mesma qualidade pedagógica
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Atividades complementares
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -62,16 +57,16 @@ const MeioPeriodo = () => {
 
               <div className="bg-gradient-to-r from-green-100 to-green-200 rounded-2xl p-6">
                 <div className="flex items-center justify-between">
-                  <div className="max-w-60">
+                  <div className="max-w-50">
                     <h4 className="text-2xl font-bold text-gray-900 mb-2">
                       Investimento
                     </h4>
                     <p className="text-gray-600">
-                      Opção econômica com qualidade garantida
+                      Mensalidade com desconto para pagamento até dia 05
                     </p>
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-green-600">
+                    <div className="text-xl font-bold text-green-600">
                       R$ 900,00
                     </div>
                     <div className="text-gray-500 line-through text-lg">
