@@ -44,13 +44,13 @@ export default function CERGLanding() {
     {
       pergunta: "Qual a idade mínima para matrícula na Educação Infantil?",
       resposta:
-        "A criança deve ter completado 2 anos até 31 de março do ano letivo para ingressar no Maternal. As demais turmas seguem a idade exigida conforme a legislação vigente.",
+        "A criança deve ter completado 3 anos até 31 de março do ano letivo para ingressar no Maternal. As demais turmas seguem a idade exigida conforme a legislação vigente.",
     },
     {
       pergunta: "Quais são os horários de funcionamento da escola?",
       resposta: `
         Período Integral: 7h às 18h30\n
-        Meio Período: 11h às 18h30\n
+        Meio Período: 11h às 18h00\n
         Vespertino:\n
         Infantil: 13h às 17h\n
         Fundamental: 13h às 17h20
