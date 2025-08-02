@@ -214,24 +214,6 @@ Obrigado(a)! 😊`;
             </div>
           </form>
         </Form>
-        <div className="mt-6 p-4 bg-blue-50 rounded-xl">
-          <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-              <span className="text-white text-xs font-bold">i</span>
-            </div>
-            <div>
-              <p className="text-sm text-blue-800 font-semibold mb-1">
-                Como funciona:
-              </p>
-              <p className="text-sm text-blue-700">
-                Após enviar o formulário, você será redirecionado para o
-                WhatsApp com uma mensagem pré-formatada. Nossa equipe entrará em
-                contato para agendar sua visita e orientar sobre os próximos
-                passos.
-              </p>
-            </div>
-          </div>
-        </div>
       </DialogContent>
     </Dialog>
   );
