@@ -1,6 +1,5 @@
 import { Phone, Calendar } from "lucide-react";
 import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
 import Link from "next/link";
 
 const Hero = () => {

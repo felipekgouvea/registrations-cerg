@@ -23,7 +23,7 @@ const MeioPeriodo = () => {
           <p className="text-xl text-gray-600">
             Flexibilidade para sua família
           </p>
-          <p className="text-xl text-gray-600">11h às 18h30</p>
+          <p className="text-xl text-gray-600">11h às 18h00</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
@@ -41,7 +41,7 @@ const MeioPeriodo = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">Almoço incluíso</span>
+                  <span className="text-gray-700">Almoço incluso</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />

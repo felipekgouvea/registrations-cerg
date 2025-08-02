@@ -37,8 +37,77 @@ import MeioPeriodo from "@/_components/meio-periodo";
 
 import LogoMarca from "../../public/cerg.png";
 import Link from "next/link";
+import FormDialog from "@/_components/form-dialog";
 
 export default function CERGLanding() {
+  const faqList = [
+    {
+      pergunta: "Qual a idade mínima para matrícula na Educação Infantil?",
+      resposta:
+        "A criança deve ter completado 2 anos até 31 de março do ano letivo para ingressar no Maternal. As demais turmas seguem a idade exigida conforme a legislação vigente.",
+    },
+    {
+      pergunta: "Quais são os horários de funcionamento da escola?",
+      resposta: `
+        Período Integral: 7h às 18h30\n
+        Meio Período: 11h às 18h30\n
+        Vespertino:\n
+        Infantil: 13h às 17h\n
+        Fundamental: 13h às 17h20
+      `,
+    },
+    {
+      pergunta: "A escola oferece alimentação para os alunos?",
+      resposta:
+        "Sim. A escola oferece alimentação balanceada para os alunos do Integral e Meio Período, seguindo cardápios planejados por nutricionista. Os alunos do vespertino podem trazer um lanche de casa.",
+    },
+    {
+      pergunta: "Como funciona o processo de matrícula?",
+      resposta:
+        "O processo de matrícula começa com o preenchimento de uma ficha cadastral. Em seguida, são entregues os documentos necessários e realizada a assinatura do contrato escolar. A vaga é confirmada após o pagamento da primeira parcela.",
+    },
+    {
+      pergunta: "A escola tem uniforme obrigatório?",
+      resposta:
+        "Sim. O uso do uniforme é obrigatório em todas as atividades escolares presenciais. Ele garante segurança, identificação e padronização dos alunos.",
+    },
+    {
+      pergunta: "Como os pais acompanham o desenvolvimento dos alunos?",
+      resposta:
+        "A escola realiza reuniões periódicas, envia comunicados, disponibiliza boletins e portfólios. Além disso, os pais podem se comunicar diretamente com os professores e coordenação.",
+    },
+    {
+      pergunta: "Há atividades extracurriculares?",
+      resposta:
+        "Sim. A escola oferece atividades como dança, capoeira, informática, inglês, entre outras, que complementam o desenvolvimento dos alunos de forma lúdica e criativa.",
+    },
+    {
+      pergunta: "A escola possui atendimento pedagógico individual?",
+      resposta:
+        "Sim. Quando necessário, a equipe pedagógica realiza atendimentos individualizados com alunos e responsáveis, buscando apoiar o processo de aprendizagem de forma personalizada.",
+    },
+    {
+      pergunta: "Como funciona a comunicação com a escola?",
+      resposta:
+        "A comunicação é feita por meio de grupos de WhatsApp, comunicados impressos, agenda escolar (quando aplicável) e atendimento direto com coordenação e secretaria.",
+    },
+    {
+      pergunta: "Quais documentos são exigidos para a matrícula?",
+      resposta:
+        "São necessários: certidão de nascimento do aluno, CPF e RG do responsável, comprovante de residência, cartão de vacina, declaração de escolaridade e 1 foto 3x4.",
+    },
+    {
+      pergunta: "Há desconto para irmãos?",
+      resposta:
+        "Sim. A escola oferece desconto especial para famílias com mais de um filho matriculado. Consulte a secretaria para saber o percentual e as condições.",
+    },
+    {
+      pergunta: "Qual é a proposta pedagógica da escola?",
+      resposta:
+        "A escola adota uma abordagem lúdica e significativa, com foco no desenvolvimento integral da criança, valorizando a autonomia, a afetividade, o conhecimento e a formação de valores.",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-yellow-50">
       {/* Header */}
@@ -60,13 +129,12 @@ export default function CERGLanding() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Como Funciona o processo de Matrícula
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Como Funciona a Matrícula
             </h2>
             <p className="text-xl text-gray-600">
-              Processo simples e acolhedor
+              Processo simples e acolhedor em 4 passos
             </p>
-            <p className="text-xl text-gray-600">em 4 passos</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
@@ -117,15 +185,11 @@ export default function CERGLanding() {
           </div>
 
           <div className="text-center mt-16">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-10 py-4 text-lg font-semibold rounded-2xl shadow-xl"
-            >
-              Iniciar Processo de Matrícula
-            </Button>
+            <FormDialog />
           </div>
         </div>
       </section>
+
       {/* Materials and Uniforms */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
@@ -297,396 +361,33 @@ export default function CERGLanding() {
 
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
-              <AccordionItem
-                value="item-1"
-                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-              >
-                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-red-50 transition-colors">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">1</span>
+              {faqList.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`faq-${index}`}
+                  className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
+                >
+                  <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-red-50 transition-colors">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-sm">
+                          {index + 1}
+                        </span>
+                      </div>
+                      <span className="text-lg font-semibold text-gray-900">
+                        {faq.pergunta}
+                      </span>
                     </div>
-                    <span className="text-lg font-semibold text-gray-900">
-                      Qual a idade mínima para matrícula na Educação Infantil?
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6">
-                  <div className="pl-12">
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      Aceitamos crianças a partir de 3 anos completos até 31 de
-                      março do ano letivo. Nossa Educação Infantil é dividida
-                      em:
-                      <br />
-                      <br />
-                      <strong>Maternal II:</strong> 3 anos
-                      <br />
-                      <strong>PRÉ I:</strong> 4 anos
-                      <br />
-                      <strong>PRÉ II:</strong> 5 anos
-                      <br />
-                      <br />
-                      Todas as turmas seguem uma metodologia lúdica e
-                      acolhedora, respeitando o desenvolvimento individual de
-                      cada criança.
-                    </p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-2"
-                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-              >
-                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-red-50 transition-colors">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">2</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-8 pb-6">
+                    <div className="pl-12">
+                      <p className="text-gray-700 leading-relaxed">
+                        {faq.resposta}
+                      </p>
                     </div>
-                    <span className="text-lg font-semibold text-gray-900">
-                      Quais são os horários de funcionamento da escola?
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6">
-                  <div className="pl-12">
-                    <p className="text-gray-700 leading-relaxed">
-                      <strong>Período Integral:</strong> 7h às 18h30
-                      <br />
-                      <br />
-                      <strong>Meío Período:</strong> 11h às 18h30
-                      <br />
-                      <br />
-                      <strong>Vespertino:</strong>
-                      <br />
-                      <br />
-                      <strong>Infantil:</strong> 13h às 17h
-                      <br />
-                      <strong>Fundamental:</strong> 13h às 17h20
-                    </p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-3"
-                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-              >
-                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-red-50 transition-colors">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">3</span>
-                    </div>
-                    <span className="text-lg font-semibold text-gray-900">
-                      Posso visitar a escola antes de fazer a matrícula?
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6">
-                  <div className="">
-                    <p className="text-gray-700 leading-relaxed">
-                      Claro! Incentivamos muito a visita prévia:
-                      <br />
-                      <br />
-                      <strong>Agendamento fácil:</strong> Ligue ou mande
-                      WhatsApp para agendar
-                      <br />
-                      <strong>Tour completo:</strong> Conheça todas as
-                      instalações e salas
-                      <br />
-                      <strong>Conversa com a direção:</strong> Esclareça todas
-                      as dúvidas
-                      <br />
-                      <strong>Horários flexíveis:</strong> Manhã ou tarde,
-                      conforme sua disponibilidade
-                      <br />
-                      <br />A visita é fundamental para que vocês se sintam
-                      seguros e confiantes na escolha. Será um prazer
-                      recebê-los!
-                    </p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-4"
-                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-              >
-                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-red-50 transition-colors">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">4</span>
-                    </div>
-                    <span className="text-lg font-semibold text-gray-900">
-                      A escola oferece alimentação para os alunos?
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6">
-                  <div className="">
-                    <p className="text-gray-700 leading-relaxed">
-                      Claro! Incentivamos muito a visita prévia:
-                      <br />
-                      <br />
-                      <strong>Agendamento fácil:</strong> Ligue ou mande
-                      WhatsApp para agendar
-                      <br />
-                      <strong>Tour completo:</strong> Conheça todas as
-                      instalações e salas
-                      <br />
-                      <strong>Conversa com a direção:</strong> Esclareça todas
-                      as dúvidas
-                      <br />
-                      <strong>Horários flexíveis:</strong> Manhã ou tarde,
-                      conforme sua disponibilidade
-                      <br />
-                      <br />A visita é fundamental para que vocês se sintam
-                      seguros e confiantes na escolha. Será um prazer
-                      recebê-los!
-                    </p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-5"
-                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-              >
-                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-red-50 transition-colors">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">5</span>
-                    </div>
-                    <span className="text-lg font-semibold text-gray-900">
-                      Como funciona o processo de matrícula?
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6">
-                  <div className="">
-                    <p className="text-gray-700 leading-relaxed">
-                      Claro! Incentivamos muito a visita prévia:
-                      <br />
-                      <br />
-                      <strong>Agendamento fácil:</strong> Ligue ou mande
-                      WhatsApp para agendar
-                      <br />
-                      <strong>Tour completo:</strong> Conheça todas as
-                      instalações e salas
-                      <br />
-                      <strong>Conversa com a direção:</strong> Esclareça todas
-                      as dúvidas
-                      <br />
-                      <strong>Horários flexíveis:</strong> Manhã ou tarde,
-                      conforme sua disponibilidade
-                      <br />
-                      <br />A visita é fundamental para que vocês se sintam
-                      seguros e confiantes na escolha. Será um prazer
-                      recebê-los!
-                    </p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-6"
-                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-              >
-                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-red-50 transition-colors">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">6</span>
-                    </div>
-                    <span className="text-lg font-semibold text-gray-900">
-                      A escola tem uniforme obrigatório?
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6">
-                  <div className="">
-                    <p className="text-gray-700 leading-relaxed">
-                      Claro! Incentivamos muito a visita prévia:
-                      <br />
-                      <br />
-                      <strong>Agendamento fácil:</strong> Ligue ou mande
-                      WhatsApp para agendar
-                      <br />
-                      <strong>Tour completo:</strong> Conheça todas as
-                      instalações e salas
-                      <br />
-                      <strong>Conversa com a direção:</strong> Esclareça todas
-                      as dúvidas
-                      <br />
-                      <strong>Horários flexíveis:</strong> Manhã ou tarde,
-                      conforme sua disponibilidade
-                      <br />
-                      <br />A visita é fundamental para que vocês se sintam
-                      seguros e confiantes na escolha. Será um prazer
-                      recebê-los!
-                    </p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-7"
-                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-              >
-                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-red-50 transition-colors">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">7</span>
-                    </div>
-                    <span className="text-lg font-semibold text-gray-900">
-                      Como os pais acompanham o desenvolvimento dos alunos?
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6">
-                  <div className="">
-                    <p className="text-gray-700 leading-relaxed">
-                      Claro! Incentivamos muito a visita prévia:
-                      <br />
-                      <br />
-                      <strong>Agendamento fácil:</strong> Ligue ou mande
-                      WhatsApp para agendar
-                      <br />
-                      <strong>Tour completo:</strong> Conheça todas as
-                      instalações e salas
-                      <br />
-                      <strong>Conversa com a direção:</strong> Esclareça todas
-                      as dúvidas
-                      <br />
-                      <strong>Horários flexíveis:</strong> Manhã ou tarde,
-                      conforme sua disponibilidade
-                      <br />
-                      <br />A visita é fundamental para que vocês se sintam
-                      seguros e confiantes na escolha. Será um prazer
-                      recebê-los!
-                    </p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-8"
-                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-              >
-                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-red-50 transition-colors">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">8</span>
-                    </div>
-                    <span className="text-lg font-semibold text-gray-900">
-                      Posso visitar a escola antes de fazer a matrícula?
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6">
-                  <div className="">
-                    <p className="text-gray-700 leading-relaxed">
-                      Claro! Incentivamos muito a visita prévia:
-                      <br />
-                      <br />
-                      <strong>Agendamento fácil:</strong> Ligue ou mande
-                      WhatsApp para agendar
-                      <br />
-                      <strong>Tour completo:</strong> Conheça todas as
-                      instalações e salas
-                      <br />
-                      <strong>Conversa com a direção:</strong> Esclareça todas
-                      as dúvidas
-                      <br />
-                      <strong>Horários flexíveis:</strong> Manhã ou tarde,
-                      conforme sua disponibilidade
-                      <br />
-                      <br />A visita é fundamental para que vocês se sintam
-                      seguros e confiantes na escolha. Será um prazer
-                      recebê-los!
-                    </p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-9"
-                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-              >
-                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-red-50 transition-colors">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">9</span>
-                    </div>
-                    <span className="text-lg font-semibold text-gray-900">
-                      Posso visitar a escola antes de fazer a matrícula?
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6">
-                  <div className="">
-                    <p className="text-gray-700 leading-relaxed">
-                      Claro! Incentivamos muito a visita prévia:
-                      <br />
-                      <br />
-                      <strong>Agendamento fácil:</strong> Ligue ou mande
-                      WhatsApp para agendar
-                      <br />
-                      <strong>Tour completo:</strong> Conheça todas as
-                      instalações e salas
-                      <br />
-                      <strong>Conversa com a direção:</strong> Esclareça todas
-                      as dúvidas
-                      <br />
-                      <strong>Horários flexíveis:</strong> Manhã ou tarde,
-                      conforme sua disponibilidade
-                      <br />
-                      <br />A visita é fundamental para que vocês se sintam
-                      seguros e confiantes na escolha. Será um prazer
-                      recebê-los!
-                    </p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-10"
-                className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden"
-              >
-                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-red-50 transition-colors">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">10</span>
-                    </div>
-                    <span className="text-lg font-semibold text-gray-900">
-                      Posso visitar a escola antes de fazer a matrícula?
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6">
-                  <div className="">
-                    <p className="text-gray-700 leading-relaxed">
-                      Claro! Incentivamos muito a visita prévia:
-                      <br />
-                      <br />
-                      <strong>Agendamento fácil:</strong> Ligue ou mande
-                      WhatsApp para agendar
-                      <br />
-                      <strong>Tour completo:</strong> Conheça todas as
-                      instalações e salas
-                      <br />
-                      <strong>Conversa com a direção:</strong> Esclareça todas
-                      as dúvidas
-                      <br />
-                      <strong>Horários flexíveis:</strong> Manhã ou tarde,
-                      conforme sua disponibilidade
-                      <br />
-                      <br />A visita é fundamental para que vocês se sintam
-                      seguros e confiantes na escolha. Será um prazer
-                      recebê-los!
-                    </p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
             </Accordion>
           </div>
 
